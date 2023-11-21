@@ -328,7 +328,7 @@ function enqueueExecution() {
       --request POST "${toscaServerUrl}/automationobjectservice/api/execution/enqueue" \
       --header "Content-Type: application/json" \
       --header "Authorization: Bearer ${accessToken}" \
-      --data-raw "${enqueueParameters}" \
+      --data "${enqueueParameters}" \
       --cacert "${caCertificate}" \
       ${insecureSwitch} \
       2> ${tmpFilePath}
